@@ -41,11 +41,20 @@ nav ul li a.ativo {
 
 .cadastro-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Centraliza todo o bloco */
   align-items: flex-start;
+  gap: 50px; /* Diminui o espaço entre as colunas */
   padding: 30px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.cadastro-esquerda,
+.cadastro-direita {
+  flex: 1;
+  max-width: 500px;
+}
+
 
 .cadastro-esquerda,
 .cadastro-direita {
@@ -93,3 +102,42 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+
+.seletor-cadastro {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.seletor-cadastro h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.botoes-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botoes-toggle button {
+  padding: 10px 25px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 2px solid #6a1b9a;
+  background-color: white;
+  color: #6a1b9a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botoes-toggle button:hover {
+  background-color: #f3e5f5;
+}
+
+.botoes-toggle button.ativo {
+  background-color: #6a1b9a;
+  color: white;
+}
+
