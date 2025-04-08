@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Serviço - Sistema de Frota</title>
+  <link rel="stylesheet" href="css/servico_style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Serviço</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="orcamento.html">Orçamento</a></li>
+        <li><a href="servico.html" class="ativo">Serviço</a></li>
+        <li><a href="listas.html">Listagens</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Informações do Serviço</h2>
+      <form action="../servico" method="post">
+        <input type="text" name="tipoServico" placeholder="Tipo de Serviço" required>
+        <input type="text" name="localOrigem" placeholder="Local de Origem" required>
+        <input type="text" name="localDestino" placeholder="Local de Destino" required>
+        <input type="number" step="0.01" name="distancia" placeholder="Distância (km)" required>
+        <label for="dataExecucao">Data de Execução:</label>
+        <input type="date" name="dataExecucao" required>
+
+        <label for="idMotorista">Motorista:</label>
+        <select name="idMotorista" required>
+          <option value="">Selecione um Motorista</option>
+          <!-- opções dinâmicas com JSP -->
+        </select>
+
+        <label for="idCaminhao">Caminhão:</label>
+        <select name="idCaminhao" required>
+          <option value="">Selecione um Caminhão</option>
+          <!-- opções dinâmicas com JSP -->
+        </select>
+
+        <label for="idOrcamento">Orçamento:</label>
+        <select name="idOrcamento" required>
+          <option value="">Selecione um Orçamento</option>
+          <!-- opções dinâmicas com JSP -->
+        </select>
+
+        <button type="submit">Cadastrar Serviço</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Sistema de Frota</p>
+  </footer>
+</body>
+</html>

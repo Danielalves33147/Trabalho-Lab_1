@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - Sistema de Frota</title>
+  <link rel="stylesheet" href="css/cadastro_style.css">
+  <script>
+    function alternarFormulario() {
+      const tipo = document.getElementById("tipoUsuario").value;
+      document.getElementById("formTransportador").style.display = tipo === "transportador" ? "block" : "none";
+      document.getElementById("formMotorista").style.display = tipo === "motorista" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Cadastro</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cadastro.html" class="ativo">Cadastro</a></li>
+        <li><a href="orcamento.html">Orçamento</a></li>
+        <li><a href="servico.html">Serviço</a></li>
+        <li><a href="listas.html">Listagens</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cadastro-container">
+    <section class="cadastro-esquerda">
+      <h2>Cadastro de Usuários</h2>
+
+      <label for="tipoUsuario">Tipo:</label>
+      <select id="tipoUsuario" onchange="alternarFormulario()">
+        <option value="">Selecione</option>
+        <option value="transportador">Transportador</option>
+        <option value="motorista">Motorista</option>
+      </select>
+
+      <!-- Transportador -->
+      <form id="formTransportador" action="../transportador" method="post" style="display:none;" class="formulario">
+        <h3>Transportador</h3>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="cpfCnpj" placeholder="CPF/CNPJ" required>
+        <input type="text" name="telefone" placeholder="Telefone" required>
+        <input type="text" name="endereco" placeholder="Endereço" required>
+        <input type="date" name="dataRegistro" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <!-- Motorista -->
+      <form id="formMotorista" action="../motorista" method="post" style="display:none;" class="formulario">
+        <h3>Motorista</h3>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="cpf" placeholder="CPF" required>
+        <input type="text" name="cnh" placeholder="CNH" required>
+        <input type="text" name="telefone" placeholder="Telefone" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <section class="cadastro-direita">
+      <h2>Cadastro de Caminhão</h2>
+      <form action="../caminhao" method="post" class="formulario">
+        <input type="text" name="placa" placeholder="Placa" required>
+        <input type="text" name="modelo" placeholder="Modelo" required>
+        <input type="text" name="tipo" placeholder="Tipo" required>
+        <input type="date" name="anoFabricacao" required>
+        <input type="number" step="0.01" name="capacidadeMax" placeholder="Capacidade Máxima (kg)" required>
+        <select name="idMotorista" required>
+          <option value="">Selecione um Motorista</option>
+          <!-- JSP preencherá dinamicamente -->
+        </select>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Sistema de Frota</p>
+  </footer>
+</body>
+</html>

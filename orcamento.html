@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerar Orçamento - Sistema de Frota</title>
+  <link rel="stylesheet" href="css/orcamento_style.css">
+</head>
+<body>
+  <header>
+    <h1>Gerar Orçamento</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="orcamento.html" class="ativo">Orçamento</a></li>
+        <li><a href="servico.html">Serviço</a></li>
+        <li><a href="listas.html">Listagens</a></li>
+        <li><a href="relatorio.html">Relatório</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Dados do Orçamento</h2>
+      <form action="../orcamento" method="post">
+        <input type="text" name="descricao" placeholder="Descrição do Orçamento" required>
+        <label for="dataOrcamento">Data:</label>
+        <input type="date" name="dataOrcamento" required>
+        <input type="number" step="0.01" name="valorTotal" placeholder="Valor Total (R$)" required>
+        <textarea name="observacoes" rows="4" placeholder="Observações"></textarea>
+        <button type="submit">Gerar Orçamento</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Sistema de Frota</p>
+  </footer>
+</body>
+</html>
