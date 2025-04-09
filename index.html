@@ -3,29 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Início - Sistema de Frota</title>
+  <title>Sistema de Frota - Início</title>
   <link rel="stylesheet" href="css/index_style.css">
 </head>
 <body>
   <header>
-    <h1>Projeto - Sistema de Frota</h1>
+    <h1>Sistema de Frota</h1>
     <nav>
-      <ul>
-        <li><a href="index.html" class="ativo">Início</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-        <li><a href="orcamento.html">Orçamento</a></li>
-        <li><a href="servico.html">Serviço</a></li>
-        <li><a href="listas.html">Listagens</a></li>
-        <li><a href="relatorio.html">Relatório</a></li>
-      </ul>
+      <ul></ul>
     </nav>
   </header>
 
-  <main>
-    <section class="conteudo">
-      <h2>Bem-vindo(a) ao Sistema de Frota</h2>
-      <p>Utilize o menu acima para acessar as funcionalidades do sistema.</p>
+  <main class="container">
+    <h2 class="titulo">Painel de Acesso</h2>
+    <p class="subtitulo">Gerencie com eficiência sua frota de caminhões e serviços.</p>
+
+    <section class="container-flex">
+      <!-- VISÃO GERAL -->
+      <div class="dashboard">
+        <h2 class="titulo-dashboard">Visão Geral</h2>
+        <div class="dashboard-cards">
+          <div class="card-dado">
+            <h3>Caminhões</h3>
+            <p class="valor-dado" id="qtdCaminhoes">...</p>
+          </div>
+          <div class="card-dado">
+            <h3>Motoristas</h3>
+            <p class="valor-dado" id="qtdMotoristas">...</p>
+          </div>
+          <div class="card-dado">
+            <h3>Transportadores</h3>
+            <p class="valor-dado" id="qtdTransportadores">...</p>
+          </div>
+          <div class="card-dado">
+            <h3>Serviços em Aberto</h3>
+            <p class="valor-dado" id="servicosAbertos">...</p>
+          </div>
+          <div class="card-dado">
+            <h3>Orçamentos</h3>
+            <p class="valor-dado" id="qtdOrcamentos">...</p>
+          </div>
+          <div class="card-dado">
+            <h3>Atualizado em</h3>
+            <p class="valor-dado" id="ultimaAtualizacao">--/--/----</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPÇÕES -->
+      <div class="grid-opcoes">
+        <a class="opcao" href="cadastro.html">
+          <div class="icone">🧾</div>
+          <h3>Cadastro</h3>
+          <p>Motoristas e Transportadores</p>
+        </a>
+        <a class="opcao" href="caminhao.html">
+          <div class="icone">🚛</div>
+          <h3>Caminhão</h3>
+          <p>Cadastro de veículos</p>
+        </a>
+        <a class="opcao" href="orcamento.html">
+          <div class="icone">💰</div>
+          <h3>Orçamento</h3>
+          <p>Gerar e registrar estimativas</p>
+        </a>
+        <a class="opcao" href="servico.html">
+          <div class="icone">🛠️</div>
+          <h3>Serviço</h3>
+          <p>Montagem, entrega e afins</p>
+        </a>
+        <a class="opcao" href="relatorio.html">
+          <div class="icone">📊</div>
+          <h3>Relatório</h3>
+          <p>Consultar dados e históricos</p>
+        </a>
+        <a class="opcao" href="listas.html">
+          <div class="icone">📋</div>
+          <h3>Listagens</h3>
+          <p>Caminhões, usuários e serviços</p>
+        </a>
+      </div>
     </section>
+
+    <div class="painel-mensagem">
+      <p><strong>📌 Dica do Dia:</strong> mantenha os dados de motoristas e caminhões sempre atualizados para evitar falhas nos serviços!</p>
+    </div>
   </main>
 
   <footer>
